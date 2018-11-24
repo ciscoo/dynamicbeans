@@ -1,0 +1,6 @@
+app:
+  downstream-services:
+    rest:
+      jsonPlaceHolder:
+        url: https://jsonplaceholder.typicode.com/todos
+        api-type: io.mateo.dynamicbeans.JsonPlaceHolderApi
