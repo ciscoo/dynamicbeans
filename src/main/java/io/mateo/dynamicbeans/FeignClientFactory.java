@@ -5,10 +5,10 @@ import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
 
 public class FeignClientFactory {
-    private final JacksonEncoder encoder = new JacksonEncoder();
-    private final JacksonDecoder decoder = new JacksonDecoder();
+    private static final JacksonEncoder encoder = new JacksonEncoder();
+    private static final JacksonDecoder decoder = new JacksonDecoder();
 
-    public Object create(FeignClientProperties properties) {
+    public static Object create(FeignClientProperties properties) {
         return Feign.builder()
                 .encoder(encoder)
                 .decoder(decoder)
